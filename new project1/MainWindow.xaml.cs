@@ -17,6 +17,7 @@ namespace new_project1
             public string autor { get; set; }
             public string rok { get; set; }
             public string liczba { get; set; }
+            public int liczbawierszy { get; set; }
 
         }
  
@@ -27,8 +28,10 @@ namespace new_project1
             first.autor = txtAutor.Text;
             first.rok = txtRok.Text;
             first.liczba = txtLiczba.Text;
-
+            first.liczbawierszy = gridTab.Items.Count;
+            
              gridTab.Items.Add(first);
+
         }
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
@@ -50,10 +53,17 @@ namespace new_project1
             string autor = txtAutor.Text;
             string rok = txtLiczba.Text;
             string liczba = txtRok.Text;
+            
         }
 
-       
+        private void txtLiczba_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+           
+        }
 
-     
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            gridTab.Items.Clear();
+        }
     }
 }
